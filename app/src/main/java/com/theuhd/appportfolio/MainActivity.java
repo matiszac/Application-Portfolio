@@ -1,5 +1,6 @@
 package com.theuhd.appportfolio;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,70 +9,34 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn_popularMovies;
-    private Button btn_stockHawk;
-    private Button btn_buildItBigger;
-    private Button btn_makeYourAppMaterial;
-    private Button btn_goUbiquitous;
-    private Button btn_capstone;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
 
-        // Initialize UI Components
+    public void displayToast(View view) {
+        // create reference to button that called the method
+        Button button = (Button) view;
 
-        initializeUI();
+        // text from button to be used in toast message
+        String buttonText = (String) button.getText();
 
-        // onClick Listener For Buttons
+        // application context required for making toast
+        Context context = getApplicationContext();
 
-        btn_popularMovies.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will launch my 'Popular Movies' project.", Toast.LENGTH_SHORT).show();
-            }
-        });
+        // build toast message
+        CharSequence text = getString(R.string.toast_button_prefix) + buttonText;
 
-        btn_stockHawk.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will launch my 'Stock Hawk' project.", Toast.LENGTH_SHORT).show();
-            }
-        });
+        //duration of toast message on screen
+        int duration = Toast.LENGTH_SHORT;
 
-        btn_buildItBigger.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will launch my 'Build it Bigger' project.", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        btn_makeYourAppMaterial.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will launch my 'Make Your App Material' project.", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        btn_goUbiquitous.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will launch my 'Go Ubiquitous' project.", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        btn_capstone.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will launch my capstone project.", Toast.LENGTH_SHORT).show();
-            }
-        });
+        // create toast and show
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
 
 
     }
 
-    public void initializeUI() {
-        btn_popularMovies = (Button) findViewById(R.id.btn_popularMovies);
-        btn_stockHawk = (Button) findViewById(R.id.btn_stockHawk);
-        btn_buildItBigger = (Button) findViewById(R.id.btn_buildItBigger);
-        btn_makeYourAppMaterial = (Button) findViewById(R.id.btn_makeYourAppMaterial);
-        btn_goUbiquitous = (Button) findViewById(R.id.btn_goUbiquitous);
-        btn_capstone = (Button) findViewById(R.id.btn_capstone);
-    }
 }

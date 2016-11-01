@@ -7,4 +7,5 @@
     <string name="btn_goUbiquitous">Go Biquitous</string>
     <string name="btn_capstone">Capstone: My Own App</string>
     <string name="textView_title">My Nanodegree Apps</string>
+    <string name="toast_button_prefix">Launches: </string>
 </resources>

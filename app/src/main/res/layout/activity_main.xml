@@ -11,58 +11,64 @@
 
 
     <Button
-        android:layout_width="250dp"
+        android:layout_width="@dimen/button_applaunch_width"
         android:layout_height="wrap_content"
         android:text="@string/btn_popularMovies"
         android:id="@+id/btn_popularMovies"
         android:layout_below="@+id/textView_title"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="displayToast" />
 
     <Button
-        android:layout_width="250dp"
+        android:layout_width="@dimen/button_applaunch_width"
         android:layout_height="wrap_content"
         android:text="@string/btn_stockHawk"
         android:id="@+id/btn_stockHawk"
         android:layout_below="@+id/btn_popularMovies"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="displayToast" />
 
     <Button
-        android:layout_width="250dp"
+        android:layout_width="@dimen/button_applaunch_width"
         android:layout_height="wrap_content"
         android:text="@string/btn_buildItBigger"
         android:id="@+id/btn_buildItBigger"
         android:layout_below="@+id/btn_stockHawk"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="displayToast" />/>
 
     <Button
-        android:layout_width="250dp"
+        android:layout_width="@dimen/button_applaunch_width"
         android:layout_height="wrap_content"
         android:text="@string/btn_makeYourAppMaterial"
         android:id="@+id/btn_makeYourAppMaterial"
         android:layout_below="@+id/btn_buildItBigger"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="displayToast" />/>
 
     <Button
-        android:layout_width="250dp"
+        android:layout_width="@dimen/button_applaunch_width"
         android:layout_height="wrap_content"
         android:text="@string/btn_goUbiquitous"
         android:id="@+id/btn_goUbiquitous"
         android:layout_below="@+id/btn_makeYourAppMaterial"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="displayToast"/>
 
     <Button
-        android:layout_width="250dp"
+        android:layout_width="@dimen/button_applaunch_width"
         android:layout_height="wrap_content"
         android:text="@string/btn_capstone"
         android:id="@+id/btn_capstone"
         android:layout_below="@+id/btn_goUbiquitous"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="displayToast" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:layout_marginBottom="20dp"
+        android:textSize="@dimen/textview_title_fontsize"
+        android:layout_marginBottom="@dimen/textview_title_marginbottom"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/textView_title"
         android:id="@+id/textView_title"
